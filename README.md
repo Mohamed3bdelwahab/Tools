@@ -1,13 +1,19 @@
-# TUTOR INSTALL
-pkg update && pkg upgrade
+# Termux Configuration Tools
 
-pkg install git php
+A small collection of Termux customization/configuration files and an installer helper.
 
-git clone https://hakutaka1234/Tools
+## What it contains
 
-cd Tools
+- `.termux/` — Termux terminal configuration assets
+- `bash.bashrc` — shell prompt, aliases, colors, and interactive shell settings
+- `execute.php` — helper script that copies the configuration into Termux paths and reloads Termux settings
 
-php execute.php
+## Important behavior
 
-# HASIL 
-![Screenshot_20210222_122858](https://user-images.githubusercontent.com/63560321/108666412-9c28b100-7509-11eb-9851-9c9cbb928ce0.jpg)
+The installer script writes to Termux configuration locations under `/data/data/com.termux/`. Review the files before running it because it replaces shell/terminal configuration.
+
+## Typical environment
+
+This repository is intended for Termux/Android environments with PHP available.
+
+> This is a configuration utility collection, not a general-purpose PHP application.
